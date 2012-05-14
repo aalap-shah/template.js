@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Template</title>
+<link rel="stylesheet" href="css/styles.css" />
+<script type="text/javascript" src="lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="lib/underscore-min.js"></script>
+<script type="text/javascript" src="lib/backbone-min.js"></script>
+<script type="text/javascript" src="js/template.js"> </script>
+</head>
+
+<body>
+	<div id="container">
+	</div>
+<!-- Templates -->
+<script type="text/template" id="template-js-listview">
+    <div id="template-js-listview-<%= uvid %>" class="template-js-listview">
+		<ul id="template-js-listview-ul-<%= uvid %>" class="template-js-listview-ul" data-child-template="template-js-listviewitem">
+		</ul>
+		<div id="template-js-listview-container-<%= uvid %>" class="template-js-listview-container">
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="template-js-listviewitem">
+	<li id=<%= id %> class="template-js-listview-li" ><%= title %></li>
+</script>
+
+<script type="text/template" id="template-js-tabview">
+    <div id="template-js-tabview-<%= uvid %>" class="template-js-tabview">
+		<ul id="template-js-tabview-ul-<%= uvid %>" class="template-js-tabview-ul" data-child-template="template-js-tabviewitem">
+		</ul>
+		<div id="template-js-tabview-container-<%= uvid %>" class="template-js-tabview-container">
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="template-js-tabviewitem">
+	<li id=<%= id %> class="template-js-tabview-li" ><%= title %></li>
+</script>
+
+<script type="text/template" id="template-js-stubview">
+	<div id="template-js-stubview-<%= uvid %>"></div>
+</script>
+
+
+
+
+
+
+
+<script type="text/template" id="my-listview">
+    <div id="my-listview-<%= uvid %>" class="template-js-listview my-listview">
+		<ul id="my-listview-ul-<%= uvid %>" class="template-js-listview-ul my-listview-ul" data-holder="" data-repeater-template="my-listviewitem">
+		</ul>
+		<div id="my-listview-container-<%= uvid %>" class="template-js-listview-container my-listview-container" data-container="">
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="my-listviewitem">
+	<li id=<%= id %> class="template-js-listview-li my-listview-li" data-repeater=""><%= title %></li>
+</script>
+
+<script type="text/template" id="my-element-view">
+	<h1> Helllooo World1....</h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+	<div id="abcd" data-container="" data-container-template="my-inner-element-view"></div>
+	<div id="abcdef" data-container="" data-container-template="my-inner2-element-view"></div>
+</script>
+
+<script type="text/template" id="my-inner-element-view">
+	<h1> Helllooo World.2...<%= title %> </h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+	<div id="abcdefghijk" data-container="" data-container-template="my-inner3-element-view"></div>
+</script>
+
+<script type="text/template" id="my-inner2-element-view">
+	<h1> Helllooo World..3..<%= title %> </h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+</script>
+
+<script type="text/template" id="my-inner3-element-view">
+	<h1> Helllooo World...4.</h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+</script>
+
+
+
+
+
+
+<script type="text/template" id="selectionView">
+    <div class="selectionView">
+		<span> Summary View </span>
+		<ul class="selectionViewList">
+		</ul>
+		<input type="button" value="  Save  " name="Save"/>
+	</div>
+</script>
+
+<script type="text/template" id="tabView">
+    <div class="tabView">
+		<table id="<%= link %>" class="tabViewItem">
+		</table>
+		<img class="tabView-img hide" src=""/>
+		<span class="tabView-span hide"></span>
+		<span class="tabView-span2 hide"></span>
+		<div class="tabView-childArea"> </div>
+	</div>
+</script>
+
+<script type="text/template" id="tabViewItem">
+	<td id=<%= link %>><%= label %></td>
+</script>
+
+<script type="text/template" id="accordionView">
+    <div class="accordionView" id="<%= link %>">
+	</div>
+</script>
+
+<script type="text/template" id="accordionViewItem">
+		<div class="accordionViewItem" id=<%= link %>Item>
+	    	<span class="AccordionTitle"><%= label %></span>
+			<div class="accordionHideContent" id=<%= link %>Content>
+				<img class="accordionView-img" src=""/>
+				<span class="accordionView-span"><%= sublabel %></span>
+				<span class="accordionView-span2"><%= description %></span>
+				<div class="accordionView-childArea"> </div>
+    		</div>		
+		</div>
+</script>
+
+<script type="text/template" id="stubView">
+    <div class="stubView">
+		<img class="stubView-img hide" src=""/>
+		<span class="stubView-span hide"></span>
+		<span class="stubView-span2 hide"></span>
+	    <div class="stubView-childArea">
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="template-js-radiobuttonview">
+	<input type="radio" name="radio" /><br/>
+</script>
+
+<script type="text/template" id="template-js-checkboxview">
+	<input type="checkbox" name="checkbox" /><br/>
+</script>
+
+<script type="text/template" id="template-js-inputboxview">
+	<input type="text" /><br/>
+</script>
+
+</body>
+</html>
