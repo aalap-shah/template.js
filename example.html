@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Template</title>
+<!-- link rel="stylesheet" href="css/styles.css" /> -->
+<script type="text/javascript" src="lib/underscore-min.js"></script> 
+<script type="text/javascript" src="lib/backbone-min.js"></script>
+<script type="text/javascript" src="lib/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/template.js"> </script>
+<script type="text/javascript" src="js/example.js"> </script>
+</head>
+
+<body>
+	<div id="container">
+	</div>
+	
+	<script type="text/template" id="my-listview">
+    <div id="my-listview-<%= uvid %>" class="template-js-listview my-listview">
+		<ul id="my-listview-ul-<%= uvid %>" class="template-js-listview-ul my-listview-ul" data-holder="" data-repeater-template="my-listviewitem">
+		</ul>
+		<div id="my-listview-container-<%= uvid %>" class="template-js-listview-container my-listview-container" data-container="">
+		</div>
+	</div>
+</script>
+
+<script type="text/template" id="my-listviewitem">
+	<li id=<%= id %> class="template-js-listview-li my-listview-li" data-repeater=""><%= title %></li>
+</script>
+
+<script type="text/template" id="my-element-view">
+	<h1> Helllooo World1....</h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+	<div id="abcd" data-container="" data-container-template="my-inner-element-view"></div>
+	<div id="abcdef" data-container="" data-container-template="my-inner2-element-view"></div>
+</script>
+
+<script type="text/template" id="my-inner-element-view">
+	<h1> Helllooo World.2...<%= title %> </h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+	<div id="abcdefghijk" data-container="" data-container-template="my-inner3-element-view"></div>
+</script>
+
+<script type="text/template" id="my-inner2-element-view">
+	<h1> Helllooo World..3..<%= title %> </h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+</script>
+
+<script type="text/template" id="my-inner3-element-view">
+	<h1> Helllooo World...4.</h1>
+	<p> sdfsdkn vnerg vdknge dkbv sklnvdklv dfjhb ksjhf, skjgsc sk
+	sksdfsd,ms ,mvbx,vx lsnsdm xc,  kjshf,sdnczx ckshfkzn,xv bksbdajhz xcafgdjavc </p>
+</script>
+	
+	</body>
+	</html>
